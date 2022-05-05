@@ -1,0 +1,111 @@
+<templateSet group="PHP">
+  <template name="dd" value="dd($VALUE$);$END$" description="dd" toReformat="false" toShortenFQNames="true">
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tesf" value="/** @test */&#10;public function $FUNCTION$() &#10;{&#10;    $END$&#10;}" description="Test function" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ddf" value="dd(__FILE__ . ':' . __LINE__);$END$" description="ddf" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="try" value="try {&#10;    $TRY$&#10;} catch ($EXCEPTION$ $e) {&#10;    $CATCH$&#10;}" description="try/catch" toReformat="false" toShortenFQNames="true">
+    <variable name="TRY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EXCEPTION" expression="" defaultValue="\Exception" alwaysStopAt="true" />
+    <variable name="CATCH" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="formvalid" value="if ($form-&gt;isSubmitted()) {&#10;    try {&#10;        $form-&gt;validate();&#10;        /** @var $TYPE$ $data */&#10;        $data = $form-&gt;getData();&#10;        &#10;        $END$&#10;    } catch (ValidationException $e) {&#10;        $this-&gt;setValidationException($e, $form);&#10;    }&#10;}" description="Validate a Ride form" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="__" value="{{ __('$LABEL$') }}$END$" description="Translate" toReformat="false" toShortenFQNames="true">
+    <variable name="LABEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="fld" value="'$FIELD$' =&gt; $this-&gt;$FIELD$,$END$" description="Array field" toReformat="false" toShortenFQNames="true">
+    <variable name="FIELD" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="fn" value="function ($ARGS$) {&#10;    $END$&#10;}" description="function" toReformat="false" toShortenFQNames="true">
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="/t" value="// todo: $END$" description="todo" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="/n" value="// note: $END$" description="note" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="sc" value="public static function $NAME$($ARGS$): self&#10;{&#10;    return new self($VARS$);&#10;}$END$" description="static constructor" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="enum(&quot;new&quot;, &quot;create&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VARS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="slf" value="self$END$" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="inst" value="$$$name$ = new $class$($END$); " description="Instantiate a new object" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="decapitalize(class)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tsetup" value="protected function setUp()&#10;{&#10;    parent::setUp();&#10;    &#10;    $END$&#10;}" description="Test setup" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rt" value="return $this;" description="return this" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="with" value="public function with$method$($type$$$$property$): self&#10;{&#10;    $clone = clone $this;&#10;    &#10;    $clone-&gt;$end$$property$ = $$$property$;&#10;    &#10;    return $clone;    &#10;}" description="with" toReformat="false" toShortenFQNames="true">
+    <variable name="property" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="method" expression="capitalize(property)" defaultValue="" alwaysStopAt="false" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rn" value="return null;" description="return null" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rd" value="rd($VALUE$);$END$" description="rd" toReformat="false" toShortenFQNames="true">
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

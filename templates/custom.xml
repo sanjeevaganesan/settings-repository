@@ -1,0 +1,29 @@
+<templateSet group="custom">
+  <template name=":nl" value="nl: $NL$&#10;en: $OTHER$&#10;pt: $OTHER$&#10;pl: $OTHER$&#10;$END$" description="NL" toReformat="false" toShortenFQNames="true">
+    <variable name="NL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="OTHER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="prop" value="&lt;hljs prop&gt;$SELECTION$&lt;/hljs&gt;" description="HLJS prop" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="type" value="&lt;hljs type&gt;$SELECTION$&lt;/hljs&gt;" description="HLJS type" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="keyw" value="&lt;hljs keyword&gt;$SELECTION$&lt;/hljs&gt;" description="HLJS keyword" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="generic" value="&lt;hljs generic&gt;$SELECTION$&lt;/hljs&gt;" description="HLJS generic" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

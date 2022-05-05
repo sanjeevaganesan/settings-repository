@@ -1,0 +1,13 @@
+<templateSet group="html/xml">
+  <template name="_blank" value="target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;" description="Target _blank" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="back" value="{{ fragment('back.projects.$CODE$') }}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>

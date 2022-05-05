@@ -1,0 +1,15 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="PHP/Generate PHPDoc for function" />
+    <ignoreAction name="PHP/Add @property" />
+    <ignoreAction name="PHP/Simplify FQN" />
+    <ignoreAction name="XML/Rearrange tag attributes" />
+    <ignoreAction name="XML/Remove attribute" />
+    <ignoreAction name="SQL/Qualify identifier" />
+    <ignoreAction name="SQL/Quote identifier" />
+    <ignoreAction name="SQL/Unqualify identifier" />
+    <ignoreAction name="SQL/Inject by Type" />
+    <ignoreAction name="Language injection/Inject language or reference" />
+    <ignoreAction name="SQL/Introduce table alias" />
+  </component>
+</application>
